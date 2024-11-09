@@ -60,8 +60,7 @@ if uploaded_file is not None:
             job_details = speech_client.get_transcription_job(job_id).data
             job_status = job_details.lifecycle_state
             processing_time_str = str(processing_time).split('.')[0]
-            new_status_message = f"Job Status: {
-                job_status} - Processing Time: {processing_time_str}"
+            new_status_message = f"Job Status: {job_status} - Processing Time: {processing_time_str}"
             if new_status_message != status_message:
                 status_placeholder.write("更新中...")
                 time.sleep(1)
