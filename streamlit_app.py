@@ -1,4 +1,4 @@
-
+pip install streamlit oci openai
 import streamlit as st
 import time
 import json
