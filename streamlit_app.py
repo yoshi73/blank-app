@@ -27,8 +27,7 @@ if uploaded_file is not None:
 
     st.write("OCI Speechの処理を開始します。")
     speech_client = AIServiceSpeechClient(config)
-    audio_file_uri = f'oci://{bucket_name}@{namespace}/{
-        st.session_state.uploaded_file_name}'
+    audio_file_uri = f'oci://{bucket_name}@{namespace}/{st.session_state.uploaded_file_name}'
 
     create_transcription_job_details = CreateTranscriptionJobDetails(
         compartment_id='ocid1.tenancy.oc1..aaaaaaaaruzw4uj5pbj5orefhh43yjnlrtem7kxtvb3fpbjraxxrvpc4atiq',    # コンパートメントIDを入れます
